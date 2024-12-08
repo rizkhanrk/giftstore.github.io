@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Shop - Add to Cart</title>
+  <link rel="stylesheet" href="../html/css/addtocart.css">
+</head>
+<body>
+  <header>
+    <h1>Gift Shop</h1>
+  </header>
+  <main>
+    <section class="product-list">
+      <div class="product">
+        <h3>Handmade Gift Box</h3>
+        <p>Price: $15.00</p>
+        <button onclick="addToCart('Handmade Gift Box', 15)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h3>Personalized Mug</h3>
+        <p>Price: $12.00</p>
+        <button onclick="addToCart('Personalized Mug', 12)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h3>Chocolate Bouquet</h3>
+        <p>Price: $20.00</p>
+        <button onclick="addToCart('Chocolate Bouquet', 20)">Add to Cart</button>
+      </div>
+    </section>
+    <section class="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="total">Total: $0.00</p>
+    </section>
+  </main>
+  
+  <script src="scripts.js">
+    let cart = [];
+let totalAmount = 0;
+
+function addToCart(productName, productPrice) {
+  cart.push({ name: productName, price: productPrice });
+  totalAmount += productPrice;
+  updateCart();
+}
+
+function updateCart() {
+  const cartItems = document.getElementById("cart-items");
+  const total = document.getElementById("total");
+
+  cartItems.innerHTML = "";
+  cart.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+    cartItems.appendChild(li);
+  });
+
+  total.textContent = `Total: $${totalAmount.toFixed(2)}`;
+}
+
+  </script>
+</body>
+</html>

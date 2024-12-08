@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Navbar Styling */
+/* .hero{
+    display: flex;
+    justify-content: center;
+} */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+    margin-left: -3vh;
+}
+
+nav .logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+nav h2 {
+    font-weight: bold;
+    font-family: "Dancing Script", cursive;
+    color: #6c5609;
+    font-size: 36px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2f200d;
+    font-weight: 800;
+    padding: 10px;
+    transition: color 0.3s;
+    font-family: "Poppins", serif;
+}
+
+nav ul li a:hover {
+    color: #c39023;
+}
+
+nav .menuimg {
+    width: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        background-color: #f5f5f5;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav .menuimg {
+        display: block;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* hero css start */
+.hero {
+  width: 100%;
+  padding: 20px;
+  background-color:  rgb(240, 233, 232);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 450px; /* Adjust for content */
+  margin-left: -2vh;
+  
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: center; /* Center text for smaller screens */
+}
+
+.hero video {
+  max-width: 100%;
+  height: 350px; /* Maintain aspect ratio */
+  border-radius: 15px;
+  padding-left: -2vh;
+}
+
+.shop-now {
+  background-color: #ae7b15;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.shop-now:hover {
+  background-color: #f4db82;
+}
+.hero-text{
+  padding-left: 20vh;
+  justify-content: center;
+}
+.chomu{
+  font-weight: bold;
+    font-family: "Dancing Script", cursive;
+    color: #a17c32;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+.lomu{
+  color: rgb(81, 79, 79);
+  font-family: "Dancing Script", cursive;
+  font-size: 22px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Align text centrally */
+  }
+
+  .hero-text {
+    margin-bottom: 20px;
+  }
+
+  .shop-now {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 24px; /* Smaller font for headings */
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .shop-now {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+
+.maan{
+  height: 120vh;
+}
+.featured-products {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.featured-products h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Product Section */
+.product-section {
+  padding: 20px;
+}
+
+.product-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 1.5rem;
+   padding: 2rem;
+    
+}
+.maan h2{
+  font-weight: bold;
+    font-family: "Dancing Script", cursive;
+    color: #9a7b0c;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    padding-top: 2vh;
+}
+/* Product Card */
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+.product-card a{
+  text-decoration: none;
+}
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Product Image */
+.product-image {
+  width: 100%;
+        height: 300px;
+        display: block;
+}
+
+/* Product Title */
+.product-title {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+/* Product Description */
+.product-description {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+  text-align: left;
+}
+
+/* Product Price */
+.product-price {
+  font-size: 18px;
+  color: #e63946;
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+  display: grid;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: 90%; /* Take full width on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .product-container {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-title {
+    font-size: 18px;
+  }
+
+  .product-description {
+    font-size: 12px;
+  }
+
+  .add-to-cart {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+/* Footer Styling */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin-left: -2vh;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-left: -2vh;
+}
+
+/* Footer Left */
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Footer Title */
+.footer h3 {
+    font-size: 20px;
+    color: #f39c12;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Footer Links */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer ul li a:hover {
+    color: #f39c12;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #34495e;
+    padding: 10px;
+    color: #ecf0f1;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        flex: 1;
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer h3 {
+        font-size: 18px;
+    }
+
+    .footer ul li a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+body{
+  overflow-x: hidden;
+}
+
+</style>
+<body>
+  <nav>
+    <img src="./images/bo.png" class="logo" alt="RoyalGiftShop Logo">
+    <h2 class="navheading">RoyalGiftShop</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+    </ul>
+    <img src="./images/images-removebg-preview (4).png" class="menuimg" alt="Menu Icon" onclick="toggleMenu()">
+</nav>
+
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('active');
+    }
+</script>
+                
+              <!-- Hero Section -->
+             <!-- Hero Section -->
+              <section class="hero">
+                <div class="hero-text">
+                  <h2 class="chomu">Find the Perfect Gift for the Special Day</h2>
+                  <p class="lomu">Browse through our beautiful selection of wedding gifts!</p>
+                  <button class="shop-now">Shop Now</button>
+                </div>
+                <video autoplay muted loop>
+                  <source src="../html/images/5889618-uhd_3840_2160_25fps.mp4" type="video/mp4">
+              </section>
+
+            
+              <!-- Featured Products Section -->
+              <div class="maan">
+                <div class="bx">
+                    <h2>Wedding Gifts</h2>
+                    <section class="product-section">
+                        <div class="product-container">
+                            <!-- Product Card 1 -->
+                            <div class="product-card">
+                              <a href="../html/rty/Wedding Gifts Detail.html">
+                                <img src="../html/images/dry.jpg" alt="Product 1" class="product-image">
+                                <h3 class="product-title">Premium Dry Fruits Gift Box</h3>
+                                <p class="product-description">This elegantly designed gift box is perfect for any celebration or special occasion. It features:
+
+                                  A selection of premium-quality dry fruits, including almonds, pistachios, and cashews.</p>
+                                <p class="product-price">$25.00</p>
+                              </a>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <!-- Product Card 2 -->
+                            <div class="product-card">
+                                <img src="../html/images/gi.jpg" alt="Product 2" class="product-image">
+                                <h3 class="product-title">Elegant Islamic Gift Hamper</h3>
+                                <p class="product-description">This beautifully curated Islamic gift hamper is perfect for cherished moments and special occasions. It includes:
+
+                                  A stunning Quran with a luxurious embossed cover.
+                                  </p>
+                                <p class="product-price">$15.00</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <!-- Product Card 3 -->
+                            <div class="product-card">
+                                <img src="../html/images/bride.jpg" alt="Product 3" class="product-image">
+                                <h3 class="product-title">Bridesmaid hampers</h3>
+                                <p class="product-description">"A little token of love and gratitude for being by my side on this special journey. Your support and friendship mean the world to me.❤️"
+
+                                  Let me know if you’d like to tweak it further! 😊</p>
+                                <p class="product-price">$20.00</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <!-- Product Card 4 -->
+                            <div class="product-card">
+                                <img src="../html/images/32e29ae4ba9bda086ac369a773eeac3d.jpg" alt="Product 4" class="product-image">
+                                <h3 class="product-title">Rose Necklace Jewelry Box </h3>
+                                <p class="product-description">Ladies, keep your eternal rose jewelry box safe and sound with this natural wood necklace box. The luxurious hardwood exterior is perfect for protecting your delicate jewelry,</p>
+                                <p class="product-price">$20.00</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product-section">
+                      <div class="product-container">
+                          <!-- Product Card 1 -->
+                          <div class="product-card">
+                              <img src="../html/images/download (1).jfif" alt="Product 1" class="product-image">
+                              <h3 class="product-title">Elegant Pink Bliss Wedding Gift Box</h3>
+                              <p class="product-description">Celebrate love and elegance with this stunning wedding gift box. Beautifully crafted with a floral-themed pouch, luxurious "Vanilla Crush" body care essentials.</p>
+                              <p class="product-price">$40.00</p>
+                              <button class="add-to-cart">Add to Cart</button>
+                          </div>
+                          <!-- Product Card 2 -->
+                          <div class="product-card">
+                              <img src="../html/images/makeup.jfif" alt="Product 2" class="product-image">
+                              <h3 class="product-title">Charming Pink Makeup Bouquet</h3>
+                              <p class="product-description">Gift a touch of beauty with this elegant makeup bouquet, featuring an array of premium beauty products wrapped in luxurious pink paper. Adorned with artificial </p>
+                              <p class="product-price">$15.00</p>
+                              <button class="add-to-cart">Add to Cart</button>
+                          </div>
+                          <!-- Product Card 3 -->
+                          <div class="product-card">
+                              <img src="../html/images/wed.jfif" alt="Product 3" class="product-image">
+                              <h3 class="product-title">Traditional Wedding Gift Hamper</h3>
+                              <p class="product-description">Celebrate love and tradition with this exquisite wedding gift set. Featuring a rich red satin stole, elegant pearl-studded earrings, matching bangles, vibrant roses. This hamper is perfect for making special moments </p>
+                              <p class="product-price">$20.00</p>
+                              <button class="add-to-cart">Add to Cart</button>
+                          </div>
+                          <!-- Product Card 4 -->
+                          <div class="product-card">
+                              <img src="../html/images/MEHNDI Hai RACHNE wali PLATTER 🥰.jfif" alt="Product 4" class="product-image">
+                              <h3 class="product-title">Mehndi Celebration Platter</h3>
+                              <p class="product-description">Add charm to your Mehndi ceremony with this beautifully handcrafted platter. Adorned with vibrant floral arrangements, golden accents, decorative cones.This platter is perfect for gifting or presenting henna items. </p>
+                              <p class="product-price">$18.00</p>
+                              <button class="add-to-cart">Add to Cart</button>
+                          </div>
+                      </div>
+                  </section>
+                </div>
+                <!-- product section end -->
+                       <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-left">
+          <h3>About Us</h3>
+          <p>We are dedicated to providing the best selection of unique and thoughtful gifts for all occasions. Shop with us for a memorable experience!</p>
+      </div>
+      <div class="footer-middle">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About</a></li>
+          </ul>
+      </div>
+      <div class="footer-right">
+          <h3>Contact Us</h3>
+          <p>Email: razayousuf348@gmail.com</p>
+          <p>Phone: +92 327 8421162</p>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 RoyalGiftShop. All Rights Reserved.</p>
+  </div>
+</footer>
+           
+            
+            </body>
+            </html>
+               
+
+
+
+
+
+        </div>
+
+
+    </section>
+
+</body>
+</html>

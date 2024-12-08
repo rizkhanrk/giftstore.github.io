@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+nav .logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+nav h2 {
+    font-weight: bold;
+    font-family: "Dancing Script", cursive;
+    color: #6c5609;
+    font-size: 36px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2f200d;
+    font-weight: 700;
+    padding: 10px;
+    transition: color 0.3s;
+    font-family: "Poppins", serif;
+}
+
+nav ul li a:hover {
+    color: #c39023;
+}
+
+nav .menuimg {
+    width: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        background-color: #f5f5f5;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav .menuimg {
+        display: block;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+  .abou p{
+      margin-left: 60vh;
+      margin-top: -25vh;
+      font-family: "Hubot Sans", sans-serif;
+  }
+  .cons{
+      height: 450px;
+      width: 111%;
+      margin-left: -21vh;
+      margin-top: 20vh;
+      background-image: url(../images/BEY.gif);
+      background-size: cover;
+      background-repeat: no-repeat; 
+  }
+  .cons h1{
+      display: flex;
+      justify-content: center;
+      font-family: "Dancing Script", cursive;
+      font-size: 80px;
+      margin-top: -20vh;
+      line-height: 450px;
+  }
+  .cate{
+      height: 150px;
+      background-color: #c39023;
+  }
+  .cat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    min-height: 85vh;
+    margin: 0;
+    height: 300px;
+    width: 100%;
+}
+
+/* Heading Styling */
+.headi {
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(89, 77, 7);
+    text-shadow: 2px 2px 5px rgba(149, 134, 24, 0.5);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Categories Container */
+.categories {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Individual Category Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 260px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10vh;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 0 0;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .categories {
+        gap: 15px;
+    }
+
+    .card {
+        width: 45%; /* Cards take half width */
+        padding: 15px;
+    }
+
+    .card img {
+        max-width: 180px; /* Reduce image size for tablets */
+    }
+
+    .headi {
+        font-size: 35px;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .categories {
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%; /* Full-width for mobile */
+        padding: 10px;
+    }
+
+    .card img {
+        max-width: 150px; /* Further reduce image size */
+    }
+
+    .headi {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* categoriess css end */
+/* about css start */
+/* categoriess css end */
+/* Footer Styling */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 105%;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Footer Left */
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Footer Title */
+.footer h3 {
+    font-size: 20px;
+    color: #f39c12;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Footer Links */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer ul li a:hover {
+    color: #f39c12;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #34495e;
+    padding: 10px;
+    color: #ecf0f1;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        flex: 1;
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer h3 {
+        font-size: 18px;
+    }
+
+    .footer ul li a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
